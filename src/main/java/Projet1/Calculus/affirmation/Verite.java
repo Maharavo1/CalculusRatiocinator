@@ -6,7 +6,6 @@ public class Verite extends Affirmation {
     private String description;
 
 
-
     @Override
     public String getDescription() {
         return description;
