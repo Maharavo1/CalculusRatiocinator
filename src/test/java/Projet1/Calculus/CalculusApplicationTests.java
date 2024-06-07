@@ -22,5 +22,10 @@ class CalculusApplicationTests {
 	}
 
 
+	@Test
+	void louestpauvre(){
+		Mensonge mensonge = new Mensonge("Lou est pauvre");
+		assertFalse(mensonge.getValeur());
+	}
 
 }
