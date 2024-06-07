@@ -3,6 +3,7 @@ package Projet1.Calculus;
 import Projet1.Calculus.affirmation.AffirmationS;
 import Projet1.Calculus.affirmation.Mensonge;
 import Projet1.Calculus.affirmation.Verite;
+import Projet1.Calculus.conjonction.Donc;
 import Projet1.Calculus.conjonction.Et;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -35,12 +36,21 @@ class CalculusApplicationTests {
 	}
 
 	@Test
-	void Ettestaffirmationdescritpion(){
+	void Ettestdescritpion(){
 		Affirmation verite = new Verite("Lou est beau");
 		Affirmation mensonge = new Mensonge("Lou est pauvre");
 		Affirmation affirmation = new AffirmationS("Lou est généreux");
 
 		Et et = new Et(verite, mensonge);
 		assertEquals("Lou est beau et Lou est pauvre", et.getDescription());
+	}
+	@Test
+	Donctestdescription(){
+		Affirmation verite = new Verite("Lou est beau");
+		Affirmation mensonge = new Mensonge("Lou est pauvre");
+		Affirmation affirmation = new AffirmationS("Lou est généreux");
+
+		Donc donc = new Donc(verite, mensonge);
+		assertEquals("(Lou est beau donc Lou est pauvre)", donc.getDescription());
 	}
 }
