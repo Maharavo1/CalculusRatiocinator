@@ -21,6 +21,11 @@ class CalculusApplicationTests {
 		assertTrue(verite.getValeur());
 	}
 
+	@Test
+	void louestgenereux(){
+		AffirmationS affirmationVraie = new AffirmationS("Lou est généreux", true);
+		assertTrue(affirmationVraie.getValeur());
+	}
 
 	@Test
 	void louestpauvre(){
